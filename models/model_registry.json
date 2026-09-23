@@ -1,0 +1,142 @@
+{
+  "model_v1": {
+    "version": "model_v1",
+    "model_type": "LightGBM Regressor",
+    "training_period": [
+      "2025-01-08",
+      "2025-01-20"
+    ],
+    "features": [
+      "PULocationID",
+      "hour",
+      "minute",
+      "dayofweek",
+      "is_weekend",
+      "time_slot_of_day",
+      "lag_1",
+      "lag_2",
+      "lag_4",
+      "lag_8",
+      "lag_96",
+      "lag_672",
+      "demand_trend_15m",
+      "rolling_mean_4",
+      "rolling_std_4",
+      "rolling_mean_8",
+      "rolling_std_8"
+    ],
+    "validation_metrics": {
+      "MAE": 4.4845,
+      "RMSE": 7.3732,
+      "Bias": -0.2373,
+      "WAPE": 0.157
+    },
+    "status": "champion",
+    "reason": "Initial champion trained on Jan 8-20, validated on Jan 21-25",
+    "registered_at": "2026-09-23T21:15:56.063787",
+    "artifact_path": "C:\\Users\\vaidy\\OneDrive\\Desktop\\projects\\demand_prediction\\models\\model_v1.joblib"
+  },
+  "model_v2": {
+    "version": "model_v2",
+    "model_type": "LightGBM Regressor (Retrained)",
+    "training_period": [
+      "2025-01-08",
+      "2025-01-25"
+    ],
+    "features": [
+      "PULocationID",
+      "hour",
+      "minute",
+      "dayofweek",
+      "is_weekend",
+      "time_slot_of_day",
+      "lag_1",
+      "lag_2",
+      "lag_4",
+      "lag_8",
+      "lag_96",
+      "lag_672",
+      "demand_trend_15m",
+      "rolling_mean_4",
+      "rolling_std_4",
+      "rolling_mean_8",
+      "rolling_std_8"
+    ],
+    "validation_metrics": {
+      "MAE": 4.344
+    },
+    "status": "rejected",
+    "reason": "Did not achieve required improvement margin over champion",
+    "registered_at": "2026-09-23T21:17:36.790902",
+    "artifact_path": "C:\\Users\\vaidy\\OneDrive\\Desktop\\projects\\demand_prediction\\models\\model_v2.joblib"
+  },
+  "model_v1_feb_review": {
+    "version": "model_v1_feb_review",
+    "model_type": "LightGBM Regressor (Active Champion)",
+    "training_period": [
+      "2025-01-08",
+      "2025-01-20"
+    ],
+    "features": [
+      "PULocationID",
+      "hour",
+      "minute",
+      "dayofweek",
+      "is_weekend",
+      "time_slot_of_day",
+      "lag_1",
+      "lag_2",
+      "lag_4",
+      "lag_8",
+      "lag_96",
+      "lag_672",
+      "demand_trend_15m",
+      "rolling_mean_4",
+      "rolling_std_4",
+      "rolling_mean_8",
+      "rolling_std_8"
+    ],
+    "validation_metrics": {
+      "Feb_MAE": 4.4509,
+      "Feb_RMSE": 7.299
+    },
+    "status": "champion",
+    "reason": "Retained as Champion: Generalized robustly across February with 0 degradation breaches",
+    "registered_at": "2026-09-23T21:49:20.173351",
+    "artifact_path": "C:\\Users\\vaidy\\OneDrive\\Desktop\\projects\\demand_prediction\\models\\model_v1.joblib"
+  },
+  "model_v2_feb": {
+    "version": "model_v2_feb",
+    "model_type": "LightGBM Regressor (Feb Retrained)",
+    "training_period": [
+      "2025-02-01",
+      "2025-02-15"
+    ],
+    "features": [
+      "PULocationID",
+      "hour",
+      "minute",
+      "dayofweek",
+      "is_weekend",
+      "time_slot_of_day",
+      "lag_1",
+      "lag_2",
+      "lag_4",
+      "lag_8",
+      "lag_96",
+      "lag_672",
+      "demand_trend_15m",
+      "rolling_mean_4",
+      "rolling_std_4",
+      "rolling_mean_8",
+      "rolling_std_8"
+    ],
+    "validation_metrics": {
+      "Holdout_MAE": 4.4056
+    },
+    "status": "rejected",
+    "reason": "Rejected by safety gate: Failed to achieve >= 3% improvement over champion on unseen holdout",
+    "registered_at": "2026-09-23T21:49:24.733938",
+    "artifact_path": "C:\\Users\\vaidy\\OneDrive\\Desktop\\projects\\demand_prediction\\models\\model_v2_feb.joblib"
+  }
+}
