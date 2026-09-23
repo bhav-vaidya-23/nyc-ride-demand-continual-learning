@@ -156,7 +156,7 @@ In a simulated mid-month retraining event (trained on Feb 1–15, evaluated on u
 - **Observed Improvement**: **-1.50%** (Challenger was worse than Champion V1)
 - **Required Improvement**: **+3.00%**
 - **Governance Decision**: **REJECT CHALLENGER & RETAIN MODEL V1**.
-- **Takeaway**: The governance gate successfully protected production from deploying an inferior retrained model.
+- **Takeaway**: The governance gate prevented deployment of a challenger model that failed to meet the required performance improvement threshold, retaining the existing champion model in production.
 
 ---
 
