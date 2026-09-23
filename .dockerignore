@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+data/raw/
+*.parquet.tmp
+.git/
+.gitignore
+.env
+tests/
+reports/

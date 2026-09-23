@@ -3,8 +3,8 @@
     "version": "model_v1",
     "model_type": "LightGBM Regressor",
     "training_period": [
-      "2025-01-08",
-      "2025-01-20"
+      "2025-01-08 00:00:00",
+      "2025-01-20 23:45:00"
     ],
     "features": [
       "PULocationID",
@@ -26,14 +26,14 @@
       "rolling_std_8"
     ],
     "validation_metrics": {
-      "MAE": 4.4845,
-      "RMSE": 7.3732,
-      "Bias": -0.2373,
-      "WAPE": 0.157
+      "MAE": 4.4896,
+      "RMSE": 7.3836,
+      "Bias": -0.2392,
+      "WAPE": 0.1571
     },
     "status": "champion",
     "reason": "Initial champion trained on Jan 8-20, validated on Jan 21-25",
-    "registered_at": "2026-09-23T21:15:56.063787",
+    "registered_at": "2026-09-23T22:37:47.012291",
     "artifact_path": "C:\\Users\\vaidy\\OneDrive\\Desktop\\projects\\demand_prediction\\models\\model_v1.joblib"
   },
   "model_v2": {
@@ -63,11 +63,11 @@
       "rolling_std_8"
     ],
     "validation_metrics": {
-      "MAE": 4.344
+      "MAE": 4.3467
     },
     "status": "rejected",
     "reason": "Did not achieve required improvement margin over champion",
-    "registered_at": "2026-09-23T21:17:36.790902",
+    "registered_at": "2026-09-23T22:37:54.319009",
     "artifact_path": "C:\\Users\\vaidy\\OneDrive\\Desktop\\projects\\demand_prediction\\models\\model_v2.joblib"
   },
   "model_v1_feb_review": {
@@ -97,12 +97,12 @@
       "rolling_std_8"
     ],
     "validation_metrics": {
-      "Feb_MAE": 4.4509,
-      "Feb_RMSE": 7.299
+      "Feb_MAE": 4.4547,
+      "Feb_RMSE": 7.3059
     },
     "status": "champion",
     "reason": "Retained as Champion: Generalized robustly across February with 0 degradation breaches",
-    "registered_at": "2026-09-23T21:49:20.173351",
+    "registered_at": "2026-09-23T22:38:23.561671",
     "artifact_path": "C:\\Users\\vaidy\\OneDrive\\Desktop\\projects\\demand_prediction\\models\\model_v1.joblib"
   },
   "model_v2_feb": {
@@ -136,7 +136,7 @@
     },
     "status": "rejected",
     "reason": "Rejected by safety gate: Failed to achieve >= 3% improvement over champion on unseen holdout",
-    "registered_at": "2026-09-23T21:49:24.733938",
+    "registered_at": "2026-09-23T22:38:28.274739",
     "artifact_path": "C:\\Users\\vaidy\\OneDrive\\Desktop\\projects\\demand_prediction\\models\\model_v2_feb.joblib"
   }
 }
